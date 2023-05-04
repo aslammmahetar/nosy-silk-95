@@ -1,0 +1,41 @@
+.h2 {
+    letter-spacing: 4px;
+    font-family: 'Montserrat', sans-serif;
+    color: #d9ae98;
+    font-weight: bold;
+}
+
+.wywg {
+    color: black;
+    font-size: 48px;
+    font-family: 'Prata', serif;
+}
+
+.Dtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.prata {
+    font-family: 'Prata', serif;
+}
+
+.gridItem {
+    padding: 20px;
+    text-align: left;
+}
+
+.gridItem:hover {
+    background-color: #f3ebeb;
+}
+
+
+.poster {
+    background-image: url(/src/Assets/Using\ the\ Five\ Elements\ to\ Purify\ Our\ Being.jpeg);
+    background-size: cover;
+    background-position: center;
+}
