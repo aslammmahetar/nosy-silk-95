@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Classes from './Pages/Classes';
+import { ChakraProvider } from '@chakra-ui/react';
+// import { app } from './FireBase/fireBase';
+// import { getDatabase } from 'firebase/database'
+import { BrowserRouter } from 'react-router-dom';
+
+// console.log(app)
+
+// const db = getDatabase(app)
+// console.log(db)
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <ChakraProvider>
+          <Classes />
+        </ChakraProvider>
+      </BrowserRouter>
     </div>
   );
 }
