@@ -1,0 +1,35 @@
+.nav-links{
+    text-decoration: none;
+    color: black;
+
+}
+.nav-number-btn{
+    font-size: 15px;
+    padding: 10px 25px;
+    font-weight: 550;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.nav-number-btn:hover{
+    background-color: black;
+    color: white;
+    
+}
+
+#card{
+    background-color: #f6f4f2;
+    border-radius: none;
+   box-shadow: none;
+}
+
+#card:hover{
+    background-color: white;
+}
+#View-btn:hover{
+    color: white;
+    background-color: #d9ae98;
+
+}
