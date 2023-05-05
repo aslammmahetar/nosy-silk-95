@@ -4,7 +4,7 @@ import { Home } from "./Home";
 import AboutUs from "./AboutUs";
 import Classes from "./Classes";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Testimonial } from "../Conmponets/TestimonialComp/Testimonial";
+import { Testimonial } from "./Testimonial";
 import ContactUS from "./ContactUS";
 import { Provider } from "react-redux";
 import { store } from "../Redux/store";
