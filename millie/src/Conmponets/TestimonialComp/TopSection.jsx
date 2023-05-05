@@ -2,10 +2,10 @@
 import React from "react";
 import "../TestimonialComp/Testimonial.css";
 
-export const Testimonial = () => {
+export const TopSection = () => {
   return (
     <div>
-      <div className="first_1">
+      <div className="div_1">
         <div id="first_1_a">
           <img
             src="https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-reviews-img.png"
@@ -38,6 +38,13 @@ export const Testimonial = () => {
           </h3>
           <h4>JESSICA LIM</h4>
         </div>
+      </div>
+
+      <div className="div_2">
+
+      </div>
+      <div className="div_3">
+       <img src="" alt="" />
       </div>
     </div>
   );
