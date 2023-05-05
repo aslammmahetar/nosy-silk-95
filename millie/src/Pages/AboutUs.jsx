@@ -7,7 +7,6 @@ import {
   Image,
   Img,
   Link,
-  Spacer,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -108,7 +107,6 @@ function AboutUs() {
         >
           <Heading>Discover Our Yoga Studio</Heading>
           <br></br>
-          <Spacer></Spacer>
           <Text>
             Come down to our expansive downtown yoga studio and discover the
             benefits of yoga with one of our many classes.
@@ -162,7 +160,7 @@ function AboutUs() {
               <br></br>
               <Text>ELLEN SHERMAN</Text>
               <br></br>
-              <Flex justifyContent={"center"} Spacer={"4px"} gap={"5px"}>
+              <Flex justifyContent={"center"} gap={"5px"}>
                 <Link>face</Link>
                 <Link>twitter</Link>
                 <Link>youtube</Link>
@@ -176,7 +174,7 @@ function AboutUs() {
               <br></br>
               <Text>CHRISTINA LATHAM</Text>
               <br></br>
-              <Flex justifyContent={"center"} Spacer={"4px"} gap={"5px"}>
+              <Flex justifyContent={"center"} gap={"5px"}>
                 <Link>face</Link>
                 <Link>twitter</Link>
                 <Link>youtuob</Link>
@@ -190,7 +188,7 @@ function AboutUs() {
               <br></br>
               <Text>LUKE STRYKER</Text>
               <br></br>
-              <Flex justifyContent={"center"} Spacer={"4px"} gap={"5px"}>
+              <Flex justifyContent={"center"} gap={"5px"}>
                 <Link>face</Link>
                 <Link>twitter</Link>
                 <Link>youtuob</Link>
@@ -204,7 +202,7 @@ function AboutUs() {
               <br></br>
               <Text>GLORIA BENNER</Text>
               <br></br>
-              <Flex justifyContent={"center"} Spacer={"4px"} gap={"5px"}>
+              <Flex justifyContent={"center"} gap={"5px"}>
                 <Link>face</Link>
                 <Link>twitter</Link>
                 <Link>youtuob</Link>
