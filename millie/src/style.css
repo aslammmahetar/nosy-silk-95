@@ -7,14 +7,15 @@
     font-size: 15px;
     padding: 10px 25px;
     font-weight: 550;
-    background-color: white;
-    border: none;
+    border: 1px solid #d9ae98;
     border-radius: 50px;
     cursor: pointer;
 }
 
+
 .nav-number-btn:hover{
-    background-color: black;
+    background-color: rgba(44, 163, 44, 0.733);
+    border: none;
     color: white;
     
 }
@@ -32,4 +33,41 @@
     color: white;
     background-color: #d9ae98;
 
+}
+
+.video-img{
+    background-image: url("https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-video-image-thumb.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#play-btn{
+    color: white;
+}
+
+#play-btn:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    
+
+
+}
+
+#messege-logo{
+    color: white;
+}
+#messege-logo:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.text-color{
+    color: rgba(0, 0, 0, 0.574);
+}
+#View-btn-top:hover{
+    background-color: black;
 }
