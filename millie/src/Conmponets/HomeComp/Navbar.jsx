@@ -51,7 +51,3 @@ export const Navbar = () => {
     </div>
   );
 };
-{
-  /*
-   */
-}
