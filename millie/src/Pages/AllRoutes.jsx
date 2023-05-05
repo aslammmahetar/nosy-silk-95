@@ -12,7 +12,7 @@ import { store } from "../Redux/store";
 const AllRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />}></Route>
+      <Route path="/" element={<ChakraProvider><Home /></ChakraProvider>}></Route>
       <Route
         path="/about-us"
         element={
