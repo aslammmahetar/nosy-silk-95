@@ -9,25 +9,36 @@ import {
   Link,
   Text,
   VStack,
+  Button
 } from "@chakra-ui/react";
+import { Navbar } from "../Conmponets/HomeComp/Navbar";
+import "../Conmponets/AboutUsComp/AboutUs.css"
+import { EmailIcon, Icon } from "@chakra-ui/icons";
+
+import {
+  AiFillFacebook,
+  AiOutlineTwitter,
+  AiFillYoutube,
+} from "react-icons/ai";
 
 //assign to sharad
 function AboutUs() {
   return (
-    <Box width={"100%"}>
-      <Box
-        bg={"red.100"}
-        height={{ base: "140px", sm: "150px", md: "80px", lg: "150px" }}
-      >
-        <Flex alignItems={"center"} justifyContent={"center"}>
-          <Heading>About Us</Heading>
-        </Flex>
-      </Box>
-      <Box mt={"50px"}>
+
+    
+    <Box width={"100%"} bg={"#f3eeec"}>
+
+       <Navbar />
+      
+
+
+      {/* <---------------------------Yogs studios newYork session------------------------------------> */}
+
+      <Box mt={"50px"} >
         <Box width={"100%"}>
           <Flex justifyContent={"space-around"} textAlign={"justify"}>
             <Box width={"30%"} padding={"20px"}>
-              <Heading as="h4" textAlign={"justify"}>
+              <Heading as="h2" textAlign={"justify"} className="heading">
                 Yoga Studio in the City of New York
               </Heading>
             </Box>
@@ -53,11 +64,16 @@ function AboutUs() {
             </Box>
           </Flex>
         </Box>
+
+
+
+        {/* <--------------------------- Discover Session------------------------->*/}
+
         <Box mt={"50px"}>
           <Flex justifyContent={"space-around"}>
             <Box width={"40%"} pos={"relative"}>
               <Circle
-                bg={"green.100"}
+                bg={"red"}
                 size={"400px"}
                 pos={"absolute"}
                 top={"30px"}
@@ -116,6 +132,12 @@ function AboutUs() {
           <Text>Discover Now</Text>
         </Box>
       </Box>
+
+
+
+    
+        {/* <--------------------------------- Certificates Session--------------------------------> */}
+
       <Box w={"100%"} p={"40px"}>
         {/* 
                 https://millieyoga.com/wp-content/uploads/2020/09/example-logo-1.png
@@ -147,9 +169,16 @@ function AboutUs() {
           </Flex>
         </Flex>
       </Box>
+
+
+
+
+
+      {/* <---------------------------Yoga Instructor session----------------------> */}
+
       <Box mt={"70px"}>
         <VStack>
-          <Heading mb={"80px"}>Yoga Instructors</Heading>
+          <Heading as={"h2"} mb={"80px"}>Yoga Instructors</Heading>
 
           <Flex mt={"40px"}>
             <Box>
@@ -161,11 +190,16 @@ function AboutUs() {
               <Text>ELLEN SHERMAN</Text>
               <br></br>
               <Flex justifyContent={"center"} gap={"5px"}>
-                <Link>face</Link>
-                <Link>twitter</Link>
-                <Link>youtube</Link>
+                <Link href='' isExternal><AiFillFacebook size={"18px"} /></Link>
+                <Link href='' isExternal> <AiOutlineTwitter size={"18px"} /></Link>
+                <Link href='https://www.youtube.com/watch?v=sSiA25XlG_A' isExternal> <AiFillYoutube size={"18px"} /></Link>
               </Flex>
             </Box>
+
+
+
+          {/* <-------------------------News Setller Session---------------------> */}
+
             <Box>
               <Image
                 src="https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-instructor-3.jpg"
@@ -175,9 +209,9 @@ function AboutUs() {
               <Text>CHRISTINA LATHAM</Text>
               <br></br>
               <Flex justifyContent={"center"} gap={"5px"}>
-                <Link>face</Link>
-                <Link>twitter</Link>
-                <Link>youtuob</Link>
+                <Link href='' isExternal><AiFillFacebook size={"18px"} /></Link>
+                <Link href='' isExternal> <AiOutlineTwitter size={"18px"} /></Link>
+                <Link href='https://www.youtube.com/watch?v=sSiA25XlG_A' isExternal> <AiFillYoutube size={"18px"} /></Link>
               </Flex>
             </Box>
             <Box>
@@ -188,10 +222,11 @@ function AboutUs() {
               <br></br>
               <Text>LUKE STRYKER</Text>
               <br></br>
-              <Flex justifyContent={"center"} gap={"5px"}>
-                <Link>face</Link>
-                <Link>twitter</Link>
-                <Link>youtuob</Link>
+              <Flex justifyContent={"center"} gap={"5px"} >
+                
+                <Link href='' isExternal><AiFillFacebook size={"18px"} /></Link>
+                <Link href='' isExternal> <AiOutlineTwitter size={"18px"} /></Link>
+                <Link href='https://www.youtube.com/watch?v=sSiA25XlG_A' isExternal> <AiFillYoutube size={"18px"} /></Link>
               </Flex>
             </Box>
             <Box>
@@ -203,9 +238,14 @@ function AboutUs() {
               <Text>GLORIA BENNER</Text>
               <br></br>
               <Flex justifyContent={"center"} gap={"5px"}>
-                <Link>face</Link>
-                <Link>twitter</Link>
-                <Link>youtuob</Link>
+                <Link href='' isExternal><AiFillFacebook size={"18px"} /></Link>
+                <Link href='' isExternal> <AiOutlineTwitter size={"18px"} /></Link>
+                <Link href='https://www.youtube.com/watch?v=sSiA25XlG_A' isExternal> <AiFillYoutube size={"18px"} /></Link>
+
+                {/* <AiFillFacebook size={"18px"} />
+            <AiOutlineTwitter size={"18px"} />
+            <AiFillInstagram size={"18px"} />
+            <AiFillYoutube size={"18px"} /> */}
               </Flex>
             </Box>
           </Flex>
@@ -216,7 +256,11 @@ function AboutUs() {
         {/* 	https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-cta-section-bg.jpg */}
         <Image src="	https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-cta-section-bg.jpg" />
         <Box pos={"absolute"} top={"50%"} left={"405"} textColor={"white"}>
-          <Text>Email</Text>
+        <Button borderRadius={"50%"} size={"sm"} bgColor="#D9AE98">
+          <Icon as={EmailIcon}></Icon>
+        </Button>
+
+        
           <Heading>Subscribe To Our Newsletter</Heading>
           <br></br>
           <Text>
