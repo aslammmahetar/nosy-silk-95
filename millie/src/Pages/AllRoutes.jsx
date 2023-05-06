@@ -32,7 +32,7 @@ const AllRoutes = () => {
         }
       ></Route>
       <Route path="/testimonial" element={<Testimonial />}></Route>
-      <Route path="/contact-us" element={<ContactUS />}></Route>
+      <Route path="/contact-us" element={<ChakraProvider><ContactUS /></ChakraProvider>}></Route>
     </Routes>
   );
 };

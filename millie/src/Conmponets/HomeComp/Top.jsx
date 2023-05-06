@@ -4,6 +4,7 @@ import "../../style.css"
 import { FaLongArrowAltRight } from 'react-icons/fa'
 import { AiFillFacebook, AiFillInstagram, AiFillYoutube, AiOutlineTwitter } from 'react-icons/ai'
 
+
 export const Top = () => {
     return (
         <Box display={"flex"} justifyContent={"space-between"}  padding={"0px 155px"} backgroundImage={"url('https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-hero-section-image-bg.png')"} height={"130vh"} backgroundRepeat={"no-repeat"} backgroundPosition={"center"} zIndex={"1000"} backgroundSize={"contain"}>

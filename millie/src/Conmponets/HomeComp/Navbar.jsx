@@ -6,29 +6,17 @@ import { Menu,MenuButton,MenuList,MenuItem,Text  } from '@chakra-ui/react';
 import {ChevronDownIcon} from "@chakra-ui/icons"
 import {VscAccount} from "react-icons/vsc"
 import {CiLogin} from "react-icons/ci"
+import { Navbar, Container, Nav } from "react-bootstrap";
+import "font-awesome/css/font-awesome.min.css";
 
-// export const Navbar = () => {
-//   return (
-//     <div style={{ display: "flex", justifyContent: "space-between", padding: "0px 150px" }}>
-//       <div>
-//         <img src={logo} width={"150px"} style={{ paddingTop: "16px", mixBlendMode: "darken" }} alt="" />
-//       </div>
-//       <div style={{ display: "flex", alignItems: "center", gap: "32px", fontSize: "16px", textDecoration: "none", marginRight: "30px" }}>
-//         <Link className='nav-links' to={"/"}>Home</Link>
-//         <Link className='nav-links'>About Us</Link>
-//         <Link className='nav-links'>Classes</Link>
-//         <Link className='nav-links'>Testimonial</Link>
-//         <Link className='nav-links' to={"/contact"}>Contact Us</Link>
-       
-//         {/* <button className='nav-number-btn'>Sign In</button>
-//         <button className='nav-number-btn'>Sign InSign InSign In</button> */}
-//       </div>
-//     </div>
-//   )
-// }
-export const Navbar = () => {
+
+
+
+
+export const Naavbar = () => {
   return (
     <div
+    className="navbar-container"
       style={{
         display: "flex",
         justifyContent: "space-between",
@@ -36,6 +24,17 @@ export const Navbar = () => {
         backgroundColor: "#f6f4f2",
       }}
     >
+      {/* <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="dark"
+        variant="dark"
+        // fixed="top"
+        id="navbar"
+        className="animate-navbar nav-theme justify-content-between"
+      
+      >
+        <Container> */}
       <div>
         <img
           src={logo}
@@ -44,6 +43,11 @@ export const Navbar = () => {
           alt=""
         />
       </div>
+      {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
+
+      {/* <Navbar.Collapse id="responsive-navbar-nav"> */}
+      {/* <Nav className="me-auto"></Nav> */}
+      {/* <Nav> */}
       <div
         style={{
           display: "flex",
@@ -51,7 +55,7 @@ export const Navbar = () => {
           gap: "32px",
           fontSize: "16px",
           textDecoration: "none",
-          marginRight: "30px",
+          marginLeft: "400px",
         }}
       >
         <Link className="nav-links" to={"/"}>
@@ -78,7 +82,12 @@ export const Navbar = () => {
             <MenuItem justifyContent={"space-between"} backgroundColor={"#f6f4f2"} _hover={{backgroundColor:"#d9ae98",color:"white"}}>Join Us <VscAccount/></MenuItem>
           </MenuList>
         </Menu>
+        
       </div>
-    </div>
+      {/* </Nav> */}
+      {/* </Navbar.Collapse>
+      </Container>
+      </Navbar> */}
+     </div>
   );
 };
