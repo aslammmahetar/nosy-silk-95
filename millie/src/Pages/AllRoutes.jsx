@@ -8,11 +8,19 @@ import { Testimonial } from "./Testimonial";
 import ContactUS from "./ContactUS";
 import { Provider } from "react-redux";
 import { store } from "../Redux/store";
+import ViewAllClasses from "./ViewAllClasses";
 
 const AllRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<ChakraProvider><Home /></ChakraProvider>}></Route>
+      <Route
+        path="/"
+        element={
+          <ChakraProvider>
+            <Home />
+          </ChakraProvider>
+        }
+      ></Route>
       <Route
         path="/about-us"
         element={
@@ -33,6 +41,16 @@ const AllRoutes = () => {
       ></Route>
       <Route path="/testimonial" element={<Testimonial />}></Route>
       <Route path="/contact-us" element={<ContactUS />}></Route>
+      <Route
+        path="/classes/all-classes"
+        element={
+          <ChakraProvider>
+            <Provider store={store}>
+              <ViewAllClasses />
+            </Provider>
+          </ChakraProvider>
+        }
+      ></Route>
     </Routes>
   );
 };
