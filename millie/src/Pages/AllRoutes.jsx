@@ -10,6 +10,7 @@ import { Provider } from "react-redux";
 import { store } from "../Redux/store";
 import ViewAllClasses from "./ViewAllClasses";
 import PaymentPage from "./PaymentPage";
+import CreateNewAccount from "../Conmponets/ClassesComp/CreateNewAccount";
 
 const AllRoutes = () => {
   return (
@@ -42,8 +43,22 @@ const AllRoutes = () => {
       ></Route>
       <Route path="/testimonial" element={<Testimonial />}></Route>
 
-      <Route path="/contact-us" element={<ChakraProvider><ContactUS /></ChakraProvider>}></Route>
-
+      <Route
+        path="/contact-us"
+        element={
+          <ChakraProvider>
+            <ContactUS />
+          </ChakraProvider>
+        }
+      ></Route>
+      <Route
+        path="/createaccount"
+        element={
+          <ChakraProvider>
+            <CreateNewAccount />
+          </ChakraProvider>
+        }
+      ></Route>
       <Route
         path="/classes/all-classes"
         element={

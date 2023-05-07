@@ -1,6 +1,6 @@
 //rename this file with your component folder and start working
 import React from "react";
-import { Box, Button, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Grid, GridItem, Text } from "@chakra-ui/react";
 import styles from "./Styles/classes.module.css";
 
 function RightSection() {
