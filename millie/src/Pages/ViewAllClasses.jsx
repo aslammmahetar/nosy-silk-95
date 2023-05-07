@@ -22,12 +22,15 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Naavbar } from "../Conmponets/HomeComp/Navbar";
 import { getData } from "../Redux/ClassesReducer/action";
 import { useDispatch, useSelector } from "react-redux";
 import { ViewIcon } from "@chakra-ui/icons";
-import { useNavigate } from "react-router-dom";
+import {
+  Link,
+  // useNavigate
+} from "react-router-dom";
 import { Footer } from "../Conmponets/HomeComp/Footer";
 import defImage from "../Assets/20230507_145631.jpg";
 
@@ -35,14 +38,14 @@ const ViewAllClasses = () => {
   const { classes } = useSelector((store) => store.classesReducer);
   const { isPremium } = useSelector((store) => store.authreducer);
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [state, setState] = useState(false);
+
   console.log(isPremium);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getData(8));
   }, []);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handlePrimium = () => {};
 
@@ -120,7 +123,10 @@ const ViewAllClasses = () => {
                     return (
                       <Card key={el.id}>
                         <GridItem key={el.id}>
-                          <Image src={defImage} borderRadius={4}></Image>
+                          <Image
+                            src={isPremium ? el.image : defImage}
+                            borderRadius={4}
+                          ></Image>
                           <Box>
                             <Text>{el.title}</Text>
                             <Button
@@ -138,17 +144,17 @@ const ViewAllClasses = () => {
                             >
                               <ModalOverlay />
                               <ModalContent>
-                                <ModalHeader>Modal Title</ModalHeader>
+                                <ModalHeader>{el.title}</ModalHeader>
                                 <ModalCloseButton />
                                 <ModalBody>
                                   <iframe
                                     width="100%"
                                     height="315"
-                                    src="https://www.youtube.com/embed/i7LJ-39bFgE"
+                                    src="https://www.youtube.com/embed/brjAjq4zEIE"
                                     title="YouTube video player"
-                                    frameBorder="0"
+                                    frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowFullScreen
+                                    allowfullscreen
                                   ></iframe>
                                 </ModalBody>
                                 <ModalFooter>
@@ -165,6 +171,20 @@ const ViewAllClasses = () => {
               </TabPanel>
             </TabPanels>
           </Tabs>
+        </Box>
+        <Box mb={10} mt={6}>
+          <Link to={"/classes/all-classes/paymentpage"}>
+            <Button
+              bgColor={isPremium ? "green" : "#e41c1c"}
+              color={"white"}
+              p={"5"}
+              isDisabled={isPremium}
+            >
+              {isPremium
+                ? "Enjoy your unlimited access"
+                : "Unlock Unlimited access!"}
+            </Button>
+          </Link>
         </Box>
       </Box>
       <Footer />
