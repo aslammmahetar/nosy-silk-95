@@ -11,10 +11,10 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Login() {
+function Login({ email, setEmail, password, setpassword, signUpUser }) {
   return (
     <Box p={4} w={"460px"} boxShadow="md" m={"auto"} mt="30px">
       <Stack spacing={"15px"} pr={4}>
@@ -43,8 +43,8 @@ function Login() {
           />
           <Input
             type="emial"
-            // value={email}
-            // onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Email Address"
             pt={7}
             pb="7"
@@ -53,8 +53,9 @@ function Login() {
         </InputGroup>
         <InputGroup size="md">
           <Input
-            // value={password}
-            // onChange={(e) => setpassword(e.target.value)}
+            value={password}
+            type="password"
+            onChange={(e) => setpassword(e.target.value)}
             pr="4.5rem"
             // type={show ? "text" : "password"}
             placeholder="Enter password"
@@ -76,8 +77,8 @@ function Login() {
         <Button
           w={"100%"}
           colorScheme="blue"
-          //   isDisabled={email === "" && password === ""}
-          //   onClick={signUpUser}
+          isDisabled={email === "" && password === ""}
+          onClick={signUpUser}
         >
           Sign In
         </Button>
