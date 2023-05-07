@@ -8,6 +8,7 @@ import { Testimonial } from "./Testimonial";
 import ContactUS from "./ContactUS";
 import { Provider } from "react-redux";
 import { store } from "../Redux/store";
+import Addfeedback from "../Conmponets/TestimonialComp/Addfeedback";
 
 const AllRoutes = () => {
   return (
@@ -33,6 +34,7 @@ const AllRoutes = () => {
       ></Route>
       <Route path="/testimonial" element={<Testimonial />}></Route>
       <Route path="/contact-us" element={<ContactUS />}></Route>
+      <Route path="/Add-Feedback" element={<Addfeedback />}></Route>
     </Routes>
   );
 };

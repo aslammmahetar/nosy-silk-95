@@ -3,7 +3,11 @@ import "../../style.css";
 import logo from "../../Assets/logo.png";
 import { Link } from "react-router-dom";
 import "../TestimonialComp/NavbarTest.css";
+import Addfeedback from "./Addfeedback";
 export const NavbarTest = () => {
+  const hndleClick=()=>{
+    <Addfeedback />
+  }
   return (
    <div>
      <div id="top_div"
@@ -46,10 +50,12 @@ export const NavbarTest = () => {
         <Link className="nav-links" to={"/testimonial"}>
           Testimonial
         </Link>
-        <Link className="nav-links" to={"/contact-us"}>
+        <Link  className="nav-links" to={"/contact-us"}>
           Contact Us
         </Link>
+        <Link className="nav-links" to={"/Add-Feedback"}>Add Feedback</Link>
         <button className="nav-number-btn">+91 8709330353</button>
+        
       </div>
       
     </div>

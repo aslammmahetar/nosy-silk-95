@@ -1,0 +1,10 @@
+    body{
+    background-color: #f8f0ec;
+    height: auto;
+}
+.input_class{
+    width: 30%;
+    margin: auto;
+   height: 30px;
+border-radius: 5%;
+}

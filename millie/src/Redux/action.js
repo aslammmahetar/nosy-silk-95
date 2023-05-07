@@ -23,14 +23,15 @@ export const getData = (limit) => (dispatch) => {
 };
   export  const getfeedback=()=>(dispatch)=>{
     
-    axios.get(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/feedback`).then((res)=>{
+    axios.get(`https://645623335f9a4f23613b9d01.mockapi.io/api/feed/feedbacks`).then((res)=>{
         dispatch({type:GET_FED_DATA,payload:res.data})
         console.log(res.data)
     })
 }
-export const addfeedback=(dataObj,id)=>(dispatch)=>{
-   
-    axios.post(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/feedback`,dataObj).then((res)=>{
+export const addfeedback=(post)=>(dispatch)=>{
+  
+  
+    axios.post(`https://645623335f9a4f23613b9d01.mockapi.io/api/feed/feedbacks`,post).then((res)=>{
         dispatch({type:POST_FED_DATA})
         console.log(res)
     }).catch((err)=>{
