@@ -14,7 +14,7 @@ import {
   Button,
   Image,
 } from "@chakra-ui/react";
-import { Navbar } from "../Conmponets/HomeComp/Navbar";
+import { Naavbar } from "../Conmponets/HomeComp/Navbar";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
@@ -43,7 +43,7 @@ function PaymentPage() {
   };
   return (
     <Box bgColor={"whitesmoke"}>
-      <Navbar />
+      <Naavbar />
       <Card
         m={"auto"}
         display={"flex"}

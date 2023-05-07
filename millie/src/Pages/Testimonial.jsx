@@ -4,11 +4,11 @@ import Feedback from '../Conmponets/TestimonialComp/Feedback';
 import { TopSection } from '../Conmponets/TestimonialComp/TopSection';
 // import { bottom } from '@popperjs/core';
 import Bottom from '../Conmponets/TestimonialComp/Bottom';
-import { Navbar } from '../Conmponets/HomeComp/Navbar';
+import { Naavbar } from '../Conmponets/HomeComp/Navbar';
 import { Footer } from '../Conmponets/HomeComp/Footer';
 export const Testimonial=()=>{
     return <div>
-        <Navbar/>
+        <Naavbar/>
         <TopSection />
         <Feedback />
         <Bottom />

@@ -1,11 +1,23 @@
-import React from "react";
-import "../../style.css";
-import logo from "../../Assets/logo.png";
-import { Link } from "react-router-dom";
 
-export const Navbar = ({ bgColor }) => {
+import React from 'react'
+import "../../style.css"
+import logo from "../../Assets/logo.png"
+import { Link } from "react-router-dom"
+import { Menu,MenuButton,MenuList,MenuItem,Text  } from '@chakra-ui/react';
+import {ChevronDownIcon} from "@chakra-ui/icons"
+import {VscAccount} from "react-icons/vsc"
+import {CiLogin} from "react-icons/ci"
+import { Navbar, Container, Nav } from "react-bootstrap";
+import "font-awesome/css/font-awesome.min.css";
+
+
+
+
+
+export const Naavbar = ({bgColor}) => {
   return (
     <div
+    className="navbar-container"
       style={{
         display: "flex",
         justifyContent: "space-between",
@@ -13,6 +25,17 @@ export const Navbar = ({ bgColor }) => {
         backgroundColor: bgColor,
       }}
     >
+      {/* <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="dark"
+        variant="dark"
+        // fixed="top"
+        id="navbar"
+        className="animate-navbar nav-theme justify-content-between"
+      
+      >
+        <Container> */}
       <div>
         <img
           src={logo}
@@ -21,6 +44,11 @@ export const Navbar = ({ bgColor }) => {
           alt=""
         />
       </div>
+      {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
+
+      {/* <Navbar.Collapse id="responsive-navbar-nav"> */}
+      {/* <Nav className="me-auto"></Nav> */}
+      {/* <Nav> */}
       <div
         style={{
           display: "flex",
@@ -28,7 +56,7 @@ export const Navbar = ({ bgColor }) => {
           gap: "32px",
           fontSize: "16px",
           textDecoration: "none",
-          marginRight: "30px",
+          marginLeft: "400px",
         }}
       >
         <Link className="nav-links" to={"/"}>
@@ -46,8 +74,22 @@ export const Navbar = ({ bgColor }) => {
         <Link className="nav-links" to={"/contact-us"}>
           Contact Us
         </Link>
-        <button className="nav-number-btn">+91 8709330353</button>
+        <Menu>
+          <MenuButton cursor={"pointer"} backgroundColor={"#f6f4f2"} as={Text} >
+            Account <ChevronDownIcon />
+          </MenuButton>
+          <MenuList backgroundColor={"#f6f4f2"} >
+            <MenuItem justifyContent={"space-between"} backgroundColor={"#f6f4f2"} _hover={{backgroundColor:"#d9ae98",color:"white"}}>Sign In <CiLogin/></MenuItem>
+            <MenuItem justifyContent={"space-between"} backgroundColor={"#f6f4f2"} _hover={{backgroundColor:"#d9ae98",color:"white"}}>Join Us <VscAccount/></MenuItem>
+          </MenuList>
+        </Menu>
+        
       </div>
-    </div>
-  );
+      {/* </Nav> */}
+      {/* </Navbar.Collapse>
+      </Container>
+      </Navbar> */}
+     </div>
+  );
 };
+ 

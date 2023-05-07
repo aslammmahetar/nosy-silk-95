@@ -21,7 +21,7 @@ export const Style = () => {
             </Box>
             <Box lineHeight={"30px"} >
                 <Box mb={10}>
-                    <Text mb={3} fontWeight={"600"} fontFamily={"'Montserrat', sans-serif"}>ANUSARA</Text>
+                    <Text mb={3} fontWeight={"700"} fontFamily={"'Montserrat', sans-serif"}>ANUSARA</Text>
                     <Text className='text-color'>Created by John Friend, Anasura yoga is a <br /> modern take on traditional Hatha yoga.</Text>
                 </Box>
                 <Box mb={10}>

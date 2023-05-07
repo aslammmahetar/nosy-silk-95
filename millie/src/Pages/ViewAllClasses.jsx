@@ -23,7 +23,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { Navbar } from "../Conmponets/HomeComp/Navbar";
+import { Naavbar } from "../Conmponets/HomeComp/Navbar";
 import { getData } from "../Redux/ClassesReducer/action";
 import { useDispatch, useSelector } from "react-redux";
 import { ViewIcon } from "@chakra-ui/icons";
@@ -49,7 +49,7 @@ const ViewAllClasses = () => {
   return (
     <Box>
       <Box>
-        <Navbar />
+        <Naavbar />
       </Box>
       <Box>
         <Heading>Our Classes</Heading>
