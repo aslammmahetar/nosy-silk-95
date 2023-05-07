@@ -6,7 +6,6 @@ import {
   ModalCloseButton,
   ModalContent,
   ModalFooter,
-  ModalHeader,
   ModalOverlay,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -21,35 +20,39 @@ import {
   Text,
 } from "@chakra-ui/react";
 import styles from "./Styles/classes.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Login from "./Login";
 import { auth } from "../../FireBase/fireBase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useDispatch, useSelector } from "react-redux";
-import { store } from "../../Redux/store";
+import { useDispatch } from "react-redux";
 
 const PopularClasses = ({ classes }) => {
-  const [isAuth, setIsAuth] = useState(false);
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setpassword] = useState("");
 
-  const store = useSelector((store) => console.log(store));
-
   const dispatch = useDispatch();
-
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const data = JSON.parse(localStorage.getItem("token"));
+  const navigateTo = () => {
+    if (data == null) {
+      return "";
+    } else {
+      return navigate("/classes/all-classes");
+    }
+  };
+
   const signUpUser = () => {
     createUserWithEmailAndPassword(auth, email, password).then((res) => {
       if (res) {
-        setIsAuth(true);
+        dispatch({ type: "GET TOKEN", payload: res._tokenResponse.idToken });
         navigate("/classes/all-classes");
-        dispatch({ type: "GET TOKEN", payload: res.tokenResponse.idToken });
       }
+      localStorage.setItem("token", JSON.stringify(res._tokenResponse.idToken));
       console.log(res);
     });
   };
-
   return (
     <Box mt={"130px"}>
       <Text
@@ -73,15 +76,11 @@ const PopularClasses = ({ classes }) => {
           p={"7"}
           variant={"outline"}
           borderColor={"#d9ae98"}
-          onClick={onOpen}
+          onClick={!data ? onOpen : navigateTo}
         >
           View All Classes
         </Button>
-        <Modal
-          onClose={onClose}
-          size={"lg"}
-          isOpen={isAuth ? navigate("/classes/all-classes") : isOpen}
-        >
+        <Modal onClose={onClose} size={"lg"} isOpen={isOpen}>
           <ModalOverlay />
           <ModalContent>
             <ModalCloseButton />

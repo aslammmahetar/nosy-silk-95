@@ -1,7 +1,8 @@
 
 const initialState = {
     isAuth: false,
-    token: ""
+    token: "",
+    isPremium: false
 }
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -10,7 +11,14 @@ export const reducer = (state = initialState, { type, payload }) => {
             return {
                 ...state,
                 isAuth: true,
-                token: payload
+                token: payload,
+            }
+        }
+        case "GET PREMIUM": {
+            return {
+                ...state,
+                isAuth: true,
+                isPremium: true
             }
         }
         default:

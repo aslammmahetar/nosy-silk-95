@@ -9,6 +9,7 @@ import ContactUS from "./ContactUS";
 import { Provider } from "react-redux";
 import { store } from "../Redux/store";
 import ViewAllClasses from "./ViewAllClasses";
+import PaymentPage from "./PaymentPage";
 
 const AllRoutes = () => {
   return (
@@ -47,6 +48,16 @@ const AllRoutes = () => {
           <ChakraProvider>
             <Provider store={store}>
               <ViewAllClasses />
+            </Provider>
+          </ChakraProvider>
+        }
+      ></Route>
+      <Route
+        path="/classes/all-classes/paymentpage"
+        element={
+          <ChakraProvider>
+            <Provider store={store}>
+              <PaymentPage />
             </Provider>
           </ChakraProvider>
         }

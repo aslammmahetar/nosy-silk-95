@@ -11,11 +11,11 @@ import { Footer } from "../Conmponets/HomeComp/Footer";
 import { getData } from "../Redux/ClassesReducer/action";
 import { useDispatch, useSelector } from "react-redux";
 import HeadPoster from "../Conmponets/ClassesComp/HeadPoster";
+import PaymentPage from "./PaymentPage";
 
 const Classes = () => {
   const { classes } = useSelector((store) => store.classesReducer);
   const dispatch = useDispatch();
-  console.log(classes);
   useEffect(() => {
     dispatch(getData(4));
   }, []);
@@ -40,6 +40,7 @@ const Classes = () => {
         <FooterPoster />
       </Box>
       <Footer />
+      {/* <PaymentPage /> */}
     </Box>
   );
 };
