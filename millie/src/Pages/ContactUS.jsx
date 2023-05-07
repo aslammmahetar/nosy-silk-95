@@ -8,7 +8,7 @@ import { Map } from "../Conmponets/ContactComp/Map";
 import { Contact } from "../Conmponets/ContactComp/Contact";
 
 function ContactUS() {
-  return <div>
+  return <div style={{textAlign:"left"}}>
     <Naavbar/>
     <Contact/>
     <Map/>

@@ -1,3 +1,4 @@
+
 import React from 'react'
 import "../../style.css"
 import logo from "../../Assets/logo.png"
@@ -13,7 +14,7 @@ import "font-awesome/css/font-awesome.min.css";
 
 
 
-export const Naavbar = () => {
+export const Naavbar = ({bgColor}) => {
   return (
     <div
     className="navbar-container"
@@ -21,7 +22,7 @@ export const Naavbar = () => {
         display: "flex",
         justifyContent: "space-between",
         padding: "0px 150px",
-        backgroundColor: "#f6f4f2",
+        backgroundColor: bgColor,
       }}
     >
       {/* <Navbar
@@ -91,3 +92,4 @@ export const Naavbar = () => {
      </div>
   );
 };
+ 
