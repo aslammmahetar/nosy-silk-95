@@ -12,13 +12,10 @@ import {
   TabPanels,
   TabPanel,
   Button,
-  Image,
+  RadioGroup,
+  Radio
 } from "@chakra-ui/react";
 import { Naavbar } from "../Conmponets/HomeComp/Navbar";
-import { useParams } from "react-router-dom";
-import axios from "axios";
-import { useState } from "react";
-import { useEffect } from "react";
 import { useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -76,6 +73,7 @@ function PaymentPage() {
           </FormControl>
         </Card>
       </Card>
+      <Card></Card>
       <Card
         // border={"solid black"}
         m={"auto"}

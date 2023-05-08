@@ -10,7 +10,7 @@ function RightSection() {
       flexDirection={"column"}
       justifyContent={"flex-end"}
       textAlign={"left"}
-      width={"50%"}
+      width={{ base: "50%", sm: "100%", md: "50%", lg: "50%" }}
     >
       <Text size={"sm"} className={styles.h2}>
         Yoga For Everyone

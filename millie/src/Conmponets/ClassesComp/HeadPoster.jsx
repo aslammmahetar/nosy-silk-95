@@ -12,7 +12,11 @@ function HeadPoster() {
       }
       backgroundRepeat={"no-repeat"}
     >
-      <Text as={"h1"} className={styles.prata} fontSize={"120px"}>
+      <Text
+        as={"h1"}
+        className={styles.prata}
+        fontSize={{ base: "45px", sm: "45px", md: "100px", lg: "120px" }}
+      >
         Classes
       </Text>
     </Box>

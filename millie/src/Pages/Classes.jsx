@@ -25,7 +25,13 @@ const Classes = () => {
       <Naavbar bgColor={"#D9AE98"} />
       <HeadPoster />
       <Box width={"100%"} margin={"auto"} bgColor={"#F5F5F5"}>
-        <Flex gap={"100px"} p="50PX" width={"80%"} m="auto">
+        <Flex
+          gap={"100px"}
+          p="50PX"
+          width={"80%"}
+          m="auto"
+          flexDirection={{ base: "column", sm: "column", md: "row", lg: "row" }}
+        >
           <RightSection />
           <LeftSection />
         </Flex>

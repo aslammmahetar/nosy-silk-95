@@ -55,7 +55,9 @@ const AllRoutes = () => {
         path="/createaccount"
         element={
           <ChakraProvider>
-            <CreateNewAccount />
+            <Provider store={store}>
+              <CreateNewAccount />
+            </Provider>
           </ChakraProvider>
         }
       ></Route>
