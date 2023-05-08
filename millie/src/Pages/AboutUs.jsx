@@ -14,6 +14,8 @@ import {
 import { Naavbar } from "../Conmponets/HomeComp/Navbar";
 import "../Conmponets/AboutUsComp/AboutUs.css"
 import { EmailIcon, Icon } from "@chakra-ui/icons";
+import styles from "../Conmponets/ClassesComp/Styles/classes.module.css"
+import locations from "../Assets/yogas_locations.png"
 
 import {
   AiFillFacebook,
@@ -28,7 +30,21 @@ function AboutUs() {
     
     <Box width={"100%"} bg={"#f3eeec"}>
 
-       <Naavbar />
+       <Naavbar bgColor={"#D9AE98"}/>
+
+
+       <Box
+      bgColor={"#D9AE98"}
+      p={"70px"}
+      backgroundImage={
+        "url('https://millieyoga.com/wp-content/uploads/2020/09/mandala.svg')"
+      }
+      backgroundRepeat={"no-repeat"}
+    >
+      <Text as={"h1"} className={styles.prata} fontSize={"120px"}>
+        About Us
+      </Text>
+    </Box>
       
 
 
@@ -38,12 +54,17 @@ function AboutUs() {
         <Box width={"100%"}>
           <Flex justifyContent={"space-around"} textAlign={"justify"}>
             <Box width={"30%"} padding={"20px"}>
-              <Heading as="h2" textAlign={"justify"} className="heading">
+              <Heading as="h3"
+                      fontFamily={"montserrat"}
+                      textAlign={"justify"} 
+                      size={"lg"}>
                 Yoga Studio in the City of New York
               </Heading>
+              <Link href='https://www.google.co.in/maps/search/yoga+studios+in+new+york/@40.7777175,-73.9290838,11.23z' isExternal><Img src={locations}/></Link>
+             
             </Box>
             <Box width={"30%"} padding={"20px"}>
-              <Text>
+              <Text >
                 We deliberately chose to put our new yoga studio in one of the
                 busiest cities on the planet because we knew it would be the
                 perfect place to help people relax and center themselves. City
@@ -261,7 +282,7 @@ function AboutUs() {
         </Button>
 
         
-          <Heading>Subscribe To Our Newsletter</Heading>
+          <Heading className={styles.prata} >Subscribe To Our Newsletter</Heading>
           <br></br>
           <Text>
             Stay up to date with all our classes and class timings with our
