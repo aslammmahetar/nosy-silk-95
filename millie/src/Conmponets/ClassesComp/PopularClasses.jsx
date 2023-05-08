@@ -1,12 +1,16 @@
 import {
   Box,
   Flex,
+  Grid,
+  GridItem,
   Modal,
   ModalBody,
   ModalCloseButton,
   ModalContent,
   ModalFooter,
   ModalOverlay,
+  Toast,
+  Wrap,
   useDisclosure,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
@@ -22,9 +26,10 @@ import {
 import styles from "./Styles/classes.module.css";
 import { useNavigate } from "react-router-dom";
 import Login from "./Login";
-import { auth } from "../../FireBase/fireBase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth, signin } from "../../FireBase/fireBase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useDispatch } from "react-redux";
+import { useToast } from "@chakra-ui/react";
 
 const PopularClasses = ({ classes }) => {
   const navigate = useNavigate();
@@ -43,15 +48,32 @@ const PopularClasses = ({ classes }) => {
     }
   };
 
-  const signUpUser = () => {
-    createUserWithEmailAndPassword(auth, email, password).then((res) => {
-      if (res) {
-        dispatch({ type: "GET TOKEN", payload: res._tokenResponse.idToken });
-        navigate("/classes/all-classes");
-      }
-      localStorage.setItem("token", JSON.stringify(res._tokenResponse.idToken));
-      console.log(res);
-    });
+  const toast = useToast();
+
+  const signINUser = () => {
+    signInWithEmailAndPassword(signin, email, password)
+      .then((res) => {
+        if (res) {
+          dispatch({ type: "GET TOKEN", payload: res.user.accessToken });
+          navigate("/classes/all-classes");
+          toast({
+            title: `Login Successfully`,
+            position: "top",
+            isClosable: true,
+            status: "success",
+          });
+          localStorage.setItem("token", JSON.stringify(res.user.accessToken));
+        }
+        console.log(res);
+      })
+      .catch((er) => {
+        toast({
+          title: `Login Failed`,
+          position: "top",
+          isClosable: true,
+          status: "error",
+        });
+      });
   };
   return (
     <Box mt={"130px"}>
@@ -90,7 +112,7 @@ const PopularClasses = ({ classes }) => {
                 setEmail={setEmail}
                 password={password}
                 setpassword={setpassword}
-                signUpUser={signUpUser}
+                signUpUser={signINUser}
               />
             </ModalBody>
             <ModalFooter></ModalFooter>
@@ -98,10 +120,19 @@ const PopularClasses = ({ classes }) => {
         </Modal>
       </Flex>
       <Card mt={"50px"}>
-        <Box display={"flex"} flexDirection={"row"} width={"80%"} m="auto">
+        <Grid
+          w={"80%"}
+          m={"auto"}
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            sm: "repeat(2, 1fr)",
+            md: "repeat(3, 1fr)",
+            lg: "repeat(4, 1fr)",
+          }}
+        >
           {classes?.map((el) => {
             return (
-              <Card key={el.id} w={"100%"}>
+              <GridItem key={el.id} w={"100%"}>
                 <Image src={el.image} alt={el.title} />
                 <CardBody>
                   <Box textAlign={"left"} mt={"15px"}>
@@ -126,10 +157,10 @@ const PopularClasses = ({ classes }) => {
                     Learn More
                   </Button>
                 </CardFooter>
-              </Card>
+              </GridItem>
             );
           })}
-        </Box>
+        </Grid>
       </Card>
     </Box>
   );

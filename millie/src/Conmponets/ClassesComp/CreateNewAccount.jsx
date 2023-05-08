@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Stack,
   Box,
@@ -9,8 +9,36 @@ import {
   Button,
   Input,
 } from "@chakra-ui/react";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { auth } from "../../FireBase/fireBase";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const CreateNewAccount = () => {
+  const [email, setEmail] = useState("");
+  const [password, setpassword] = useState("");
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
+
+  const signUpUser = () => {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((res) => {
+        if (res) {
+          dispatch({ type: "GET TOKEN", payload: res._tokenResponse.idToken });
+          navigate("/classes/all-classes");
+        }
+        localStorage.setItem(
+          "token",
+          JSON.stringify(res._tokenResponse.idToken)
+        );
+        console.log(res);
+      })
+      .catch((er) => console.log(er));
+  };
+
   return (
     <Box p={4} w={"460px"} boxShadow="md" m={"auto"} mt="30px">
       <Stack spacing={"26px"}>
@@ -35,8 +63,8 @@ const CreateNewAccount = () => {
         </Button>
         <Text textAlign={"center"}>Or</Text>
         <Input
-          //   value={email}
-          //   onChange={(e) => setEmail(e.target.value)}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           type="text"
           placeholder="Email Address"
           pt={7}
@@ -55,7 +83,7 @@ const CreateNewAccount = () => {
           isRequired
         />
         <Input
-          //   value={Surename}
+          // value={Surename}
           //   onChange={(e) => setSurename(e.target.value)}
           border={"1px"}
           type="text"
@@ -65,8 +93,8 @@ const CreateNewAccount = () => {
           isRequired
         />
         <Input
-          //   value={password}
-          //   onChange={(e) => setpassword(e.target.value)}
+          value={password}
+          onChange={(e) => setpassword(e.target.value)}
           border={"1px"}
           type="password"
           placeholder="Password"
@@ -78,10 +106,10 @@ const CreateNewAccount = () => {
           By signing in, I agree to the immortal yoga Terms and Conditions.
         </Text>
         <Button
-          //   onClick={loginUser}
+          onClick={signUpUser}
           w={"100%"}
           colorScheme="blue"
-          //   isDisabled={email === ""}
+          isDisabled={email === ""}
         >
           Sign In
         </Button>

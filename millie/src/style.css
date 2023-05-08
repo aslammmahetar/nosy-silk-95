@@ -1,9 +1,10 @@
-.nav-links{
+.nav-links {
     text-decoration: none;
     color: black;
 
 }
-.nav-number-btn{
+
+.nav-number-btn {
     font-size: 15px;
     padding: 10px 25px;
     font-weight: 550;
@@ -13,29 +14,30 @@
 }
 
 
-.nav-number-btn:hover{
+.nav-number-btn:hover {
     background-color: rgba(44, 163, 44, 0.733);
     border: none;
     color: white;
-    
+
 }
 
-#card{
+#card {
     background-color: #f6f4f2;
     border-radius: none;
-   box-shadow: none;
+    box-shadow: none;
 }
 
-#card:hover{
+#card:hover {
     background-color: white;
 }
-#View-btn:hover{
+
+#View-btn:hover {
     color: white;
     background-color: #d9ae98;
 
 }
 
-.video-img{
+.video-img {
     background-image: url("https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-video-image-thumb.jpg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -44,30 +46,33 @@
     justify-content: center;
     align-items: center;
 }
-#play-btn{
+
+#play-btn {
     color: white;
 }
 
-#play-btn:hover{
+#play-btn:hover {
     background-color: white;
     color: black;
     cursor: pointer;
-    
+
 
 
 }
 
-#messege-logo{
+#messege-logo {
     color: white;
 }
-#messege-logo:hover{
+
+#messege-logo:hover {
     color: black;
     cursor: pointer;
 }
 
-.text-color{
+.text-color {
     color: rgba(0, 0, 0, 0.574);
 }
-#View-btn-top:hover{
+
+#View-btn-top:hover {
     background-color: black;
 }

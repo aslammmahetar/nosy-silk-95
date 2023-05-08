@@ -13,7 +13,14 @@ const YogaStyles = () => {
           Explore The Styles Of Yoga
         </Text>
         <Card mt={"60px"}>
-          <Grid templateColumns={"repeat(4, 1fr)"}>
+          <Grid
+            templateColumns={{
+              base: "repeat(1, 1fr)",
+              sm: "repeat(2, 1fr)",
+              md: "repeat(3, 1fr)",
+              lg: "repeat(4, 1fr)",
+            }}
+          >
             <GridItem border={" 0.5px grey"} className={styles.gridItem}>
               <Text color={"#d9ae98"} as={"b"}>
                 01.
