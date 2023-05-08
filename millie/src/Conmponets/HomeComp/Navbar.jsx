@@ -3,14 +3,15 @@ import "../../style.css";
 import logo from "../../Assets/logo.png";
 import { Link } from "react-router-dom";
 
-export const Navbar = () => {
+export const Navbar = ({bgColor}) => {
   return (
     <div
       style={{
         display: "flex",
         justifyContent: "space-between",
         padding: "0px 150px",
-        backgroundColor: "#f6f4f2",
+        backgroundColor:bgColor,
+      
       }}
     >
       <div>

@@ -3,9 +3,9 @@ import React from "react";
 import "../TestimonialComp/Testimonial.css";
 
 
-export const TopSection = () => {
+export const TopSection = ({bgColor}) => {
   return (
-    <div>
+    <div style={{backgroundColor:bgColor}}>
       <div className="div_1">
         <div id="first_1_a">
           <img

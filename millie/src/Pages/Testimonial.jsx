@@ -2,19 +2,21 @@
 import React from 'react';
 import Feedback from '../Conmponets/TestimonialComp/Feedback';
 import { TopSection } from '../Conmponets/TestimonialComp/TopSection';
-// import { bottom } from '@popperjs/core';
 import Bottom from '../Conmponets/TestimonialComp/Bottom';
-import {NavbarTest} from '../Conmponets/TestimonialComp/NavbarTest'
+import { Navbar } from '../Conmponets/HomeComp/Navbar';
 import { Footer } from '../Conmponets/HomeComp/Footer';
 import Rating from '../Conmponets/TestimonialComp/Rating';
-// import "../Conmponets/TestimonialComp/"
+import Addfeedback from '../Conmponets/TestimonialComp/Addfeedback';
 export const Testimonial=()=>{
     return <div>
-        <NavbarTest />
-        <Rating />
-        <TopSection />
-        <Feedback />
-        <Bottom />
-       <Footer/>
+       
+          <Navbar bgColor={"#d9ae98"} />
+          <Rating />
+          <TopSection />
+          <Feedback />
+          <Addfeedback/>
+          <Bottom />
+          <Footer/>
+          
     </div>
 }

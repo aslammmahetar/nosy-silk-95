@@ -42,15 +42,15 @@ useEffect(()=>{
 // }
 // console.log(feed)
   return (
-    <div className='f_div_1' style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)", margin:"auto",padding:"30px",width:"90%",}}>
+    <div className='f_div_1' style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)", margin:"auto",padding:"30px",width:"90%",gap:"70px 50px"}}>
        {
          Feedbackdata.map((el)=>{ 
-        return <div style={{padding:"20px",width:"80%",marginBottom:"30px",margin:"auto",fontStyle:"",boxShadow:"rgba(0, 0, 0, 0.08) 0px 4px 12px",height:"350px"}}>
-          <img style={{borderRadius:"50%"}} src={el.image} alt="" />
-          <h4>{el.name}</h4>
-          <p>{el.star}</p>
-          <p>{el.comment}</p>
+        return <div style={{textAlign:"initial",padding:"20px",width:"78%",marginBottom:"30px",margin:"auto",fontStyle:"",boxShadow: "rgba(17, 17, 26, 0.1) 0px 1px 0px",height:"auto"}}>
+          <img style={{borderRadius:"50%",marginTop:"-70px"}} src={el.image} alt="" />
           
+          <p style={{paddingTop:"20px"}}>{el.star}</p>
+          <p style={{fontFamily:"MV Boli"}}>{el.comment}</p>
+          <h4 style={{marginTop:"20px",color:"#333333",fontFamily:"Comic Sans MS"}} >{el.name}</h4>
         </div>
         
         

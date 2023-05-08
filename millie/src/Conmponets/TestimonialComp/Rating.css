@@ -5,6 +5,7 @@
     margin-bottom: 30px;
     padding: 20px;
     background-color: #f8f0ec;
+
 }
 .r_div_b{
     display: flex;
@@ -29,4 +30,14 @@ background-color: #d9ae98;
     margin-top: 20px;
     font-size: 25px;
 margin-bottom:  -10px;   
+}
+#testimonial_div{
+    background-color: #d9ae98;
+    height: 200px;
+    margin-top: 0px;
+    font-size: 110px;
+    /* font-style:oblique; */
+    font-weight: 320;
+    padding-top: 60px;
+    
 }
