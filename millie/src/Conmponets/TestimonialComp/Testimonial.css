@@ -47,7 +47,7 @@ font-family:fangsong;
     display: flex;
     font-size: 25px;
     flex-direction: row-reverse;
-    justify-content: start;
+    justify-content: flex-start;
 
     }
     .rating > input{
