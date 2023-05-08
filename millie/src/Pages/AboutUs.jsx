@@ -11,7 +11,7 @@ import {
   VStack,
   Button
 } from "@chakra-ui/react";
-import { Navbar } from "../Conmponets/HomeComp/Navbar";
+import { Naavbar } from "../Conmponets/HomeComp/Navbar";
 import "../Conmponets/AboutUsComp/AboutUs.css"
 import { EmailIcon, Icon } from "@chakra-ui/icons";
 
@@ -28,7 +28,7 @@ function AboutUs() {
     
     <Box width={"100%"} bg={"#f3eeec"}>
 
-       <Navbar />
+       <Naavbar />
       
 
 

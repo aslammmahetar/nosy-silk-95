@@ -3,7 +3,7 @@ import "../../style.css";
 import logo from "../../Assets/logo.png";
 import { Link } from "react-router-dom";
 
-export const Navbar = ({bgColor}) => {
+export const Naavbar = ({bgColor}) => {
   return (
     <div
       style={{
