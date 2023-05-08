@@ -1,4 +1,4 @@
-import { GET_REQ, GET_REQ_FAIL, GET_REQ_SUC } from "./actiontype"
+import { GET_FED_DATA, GET_REQ, GET_REQ_FAIL, GET_REQ_SUC, POST_FED_DATA } from "./actiontype"
 import axios from "axios";
 
 export const getReq = () => {
@@ -21,3 +21,20 @@ export const getData = (limit) => (dispatch) => {
     url.searchParams.append("limit", limit);
     axios.get(url).then(res => dispatch({ type: GET_REQ_SUC, payload: res.data })).catch((err) => dispatch(getReqFails()))
 };
+export  const getfeedback=()=>(dispatch)=>{
+    
+    axios.get(`https://645623335f9a4f23613b9d01.mockapi.io/api/feed/feedbacks`).then((res)=>{
+        dispatch({type:GET_FED_DATA,payload:res.data})
+        console.log(res.data)
+    })
+}
+export const addfeedback=(post)=>(dispatch)=>{
+  
+  
+    axios.post(`https://645623335f9a4f23613b9d01.mockapi.io/api/feed/feedbacks`,post).then((res)=>{
+        dispatch({type:POST_FED_DATA})
+        console.log(res)
+    }).catch((err)=>{
+     console.log(err)
+    })
+}

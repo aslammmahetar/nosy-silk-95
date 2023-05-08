@@ -1,6 +1,6 @@
 import React from 'react'
 
-const bottom = () => {
+const Bottom = () => {
   return (
     <div>
       <div style={{marginBottom:"-5px"}}>
@@ -11,4 +11,4 @@ const bottom = () => {
   )
 }
 
-export default bottom
+export default Bottom
