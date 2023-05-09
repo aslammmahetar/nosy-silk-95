@@ -16,6 +16,7 @@ import PaymentPage from "./PaymentPage";
 const Classes = () => {
   const { classes } = useSelector((store) => store.classesReducer);
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getData(4));
   }, []);
