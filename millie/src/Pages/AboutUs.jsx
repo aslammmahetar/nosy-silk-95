@@ -24,6 +24,7 @@ import {
   AiOutlineTwitter,
   AiFillYoutube,
 } from "react-icons/ai";
+import { Footer } from "../Conmponets/HomeComp/Footer";
 
 
 //assign to sharad
@@ -298,6 +299,8 @@ function AboutUs() {
           <Text>Never miss another session.</Text>
         </Box>
       </Box>
+
+      <Footer/>
     </Box>
   );
 }
