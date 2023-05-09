@@ -39,16 +39,21 @@
 
 .video-img {
     background-image: url("https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-video-image-thumb.jpg");
-    background-size: contain;
+    /* background-size:contain; */
+    background-size:contain;
     background-repeat: no-repeat;
-    height: 100vh;
     display: flex;
+    flex-direction: column;
+    /* display: grid; */
     justify-content: center;
     align-items: center;
+    height: 100vh;
+
 }
 
 #play-btn {
     color: white;
+    /* padding: 50%; */
 }
 
 #play-btn:hover {
@@ -75,4 +80,269 @@
 
 #View-btn-top:hover {
     background-color: black;
+}
+
+
+
+#links{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 400px;
+
+}
+/* backgroundColor={"white"} justifyContent={"center"} alignItems={"center"} padding={"50px 0px"} gap={"150px"} */
+
+#brand-sec{
+    display: grid;
+    grid-template-columns: repeat(5,10%);
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+    gap: 150px;
+}
+#style-div{
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+}
+
+#footer-top{
+    display: grid;
+    grid-template-columns: repeat(4,20%);
+    padding: 70px;
+    justify-content: center;
+}
+
+
+#footer-last{
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    padding: 20px 120px;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+
+#second-Tos-Sec{
+    grid-template-columns: repeat(4,1fr);
+}
+
+#yoga-ins{
+    width: 79%;
+    margin: auto;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+#main-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 155px;
+    background-image: url("https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-hero-section-image-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 130vh;
+
+}
+#navbar-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 150px;
+}
+/* height: "70vh",backgroundRepeat:"no-repeat" }}  */
+
+#last-sec{
+    margin-bottom: -5px;
+    background-image: url('https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-cta-section-bg.jpg');
+    height: 70vh;
+    background-repeat: no-repeat;
+}
+/* backgroundRepeat: "no-repeat", backgroundPosition: "center", display: "flex", gap:"40px",padding:"0px 150px",marginTop:"100px" }} */
+
+#contact-sec{
+    background-image: url('https://millieyoga.com/wp-content/uploads/2020/09/mandala.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    gap: 40px;
+    padding: 0px 150px;
+    margin-top: 100px;
+}
+#hanburgur{
+    display: none;
+}
+@media screen and (max-width: 950px) and (min-width: 500px){
+
+    #links{
+        display: none;
+
+    }
+    #navbar-container{
+        justify-content: space-between;
+        padding: 16px;
+        width: 100%;
+    }
+    #brand-sec{
+        grid-template-columns: repeat(2,20%);
+        text-align: center;
+    }
+    #style-div{
+        grid-template-columns: repeat(1,1fr);
+        gap: 50px;
+        text-align: center;
+    }
+    #footer-top{
+        grid-template-columns: repeat(2,40%);
+        text-align: center;
+        gap: 20px;
+    }
+    #footer-last{
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+    #second-Tos-Sec{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #yoga-ins{
+        width: 70%;
+        margin: auto;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+    #featured-sec{
+        flex-direction: column;
+    }
+    #our-studio{
+        flex-direction: column;
+    }
+    .video-img {
+        height: 100vh;
+        margin-bottom: -500px;
+    }
+    #play-btn{
+        display: none;
+    }
+    #hanburgur{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        padding-right: 20px;
+    }
+    #contact-sec{
+        flex-direction: column;
+        padding: 20px;
+    }
+    #email-call-contact{
+        flex-direction: column;
+        gap: 30px;
+    }
+    #last-sec{
+        height: 45vh;
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 300px){
+
+    #links{
+        display: none;
+
+    }
+    #navbar-container{
+        padding: 16px;
+        width: 100%;
+    }
+    #brand-sec{
+        grid-template-columns: repeat(1,30%);
+        text-align: center;
+    }
+    #style-div{
+        grid-template-columns: repeat(1,1fr);
+        gap: 50px;
+        text-align: center;
+    }
+    #footer-top{
+        grid-template-columns: repeat(1,80%);
+        text-align: center;
+        gap: 20px;
+    }
+    #footer-last{
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+    #second-Tos-Sec{
+        grid-template-columns: repeat(1,1fr);
+    }
+    #second-top-sec-btn{
+        flex-direction: column;
+        gap: 20px;
+    }
+    #yoga-ins{
+        width: 60%;
+        margin: auto;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+    #featured-sec{
+        flex-direction: column;
+    }
+    #our-studio{
+        flex-direction: column;
+        text-align: center;
+    }
+    .video-img {
+        height: 100vh;
+        margin-bottom: -600px;
+    }
+    #play-btn{
+        display: none;
+    }
+    #top-logo{
+        display: none;
+        font-size: 50px;
+    }
+    #top-last{
+        flex-direction: column;
+        padding-left: 30%;
+        
+    }
+    #main-top{
+        padding: 10px;
+        text-align: center;
+        margin-bottom: -300px;
+    }
+    #contact-sec{
+        flex-direction: column;
+        padding: 10px;
+    }
+    #email-call-contact{
+        flex-direction: column;
+        gap: 30px;
+    }
+    #hanburgur{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        padding-right: 15px;
+    }
+    #last-sec{
+        height: 45vh;
+        padding-bottom: 50px;
+    }
 }

@@ -10,6 +10,7 @@ import {
   Heading,
   Image,
   Stack,
+  Grid,
 } from "@chakra-ui/react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import "../../style.css";
@@ -30,7 +31,7 @@ export const SecondTop = () => {
       >
         Popular Classes
       </Text>
-      <Flex width={"80%"} m="auto" justifyContent={"space-between"}>
+      <Flex id="second-top-sec-btn" width={"80%"} m="auto" justifyContent={"space-between"}>
         <Text textAlign={"left"} className="text-color">
           We offer a full range of classes to suit any level of yoga experience,
           from <br /> beginner to seasoned veteran, and any range of mobility.
@@ -46,7 +47,7 @@ export const SecondTop = () => {
           View All Classes
         </Button>
       </Flex>
-      <Flex width={"80%"} m={"auto"} mt={50} mb={75}>
+      <Grid id={"second-Tos-Sec"} width={"80%"} m={"auto"} mt={50} mb={75}>
         <Card w={"100%"} id="card">
           <Image
             src="https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-popular-class-1.jpg"
@@ -134,7 +135,7 @@ export const SecondTop = () => {
             </Stack>
           </CardBody>
         </Card>
-      </Flex>
+      </Grid>
     </Box>
   );
 };
