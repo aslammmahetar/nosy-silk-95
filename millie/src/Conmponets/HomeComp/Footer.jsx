@@ -1,11 +1,12 @@
 import React from 'react'
 import logo from "../../Assets/logo.png"
 import {AiFillFacebook,AiOutlineTwitter,AiFillInstagram,AiFillYoutube} from "react-icons/ai"
+import "../../style.css"
 
 export const Footer = () => {
   return (
     <div style={{backgroundColor:"#ffffff"}}>
-        <div style={{height:"350px",display:"flex",justifyContent:"space-evenly",paddingTop:"70px"}}>
+        <div id='footer-top'>
             <div>
                 <p style={{marginBottom:"20px",fontSize:"17px",fontFamily:"'Playfair Display', serif",color:"rgba(0, 0, 0, 0.75)"}}>YOGA STYLE</p>
                 <p>Anusara</p>
@@ -13,13 +14,13 @@ export const Footer = () => {
                 <p>Bikram</p>
                 <p>Hatha</p>
             </div>
-            <div style={{marginRight:"30px"}}>
+            <div >
                 <p>Hot Yoga</p>
                 <p>Lyenger</p>
                 <p>Restorative</p>
                 <p>Vinyasa</p>
             </div>
-            <div style={{textAlign:"center",marginLeft:"50px",color:"rgba(0, 0, 0, 0.75)"}}>
+            <div style={{textAlign:"center",color:"rgba(0, 0, 0, 0.75)"}}>
                 <img src={logo} style={{margin:"auto",marginBottom:"20px"}} width={"150px"} alt="" />
                 <p>With a huge range of yoga styles to</p>
                 <p>choose from and a beautiful and</p>
@@ -33,7 +34,7 @@ export const Footer = () => {
                     <AiFillYoutube size={"18px"}/>
                 </div>
             </div>
-            <div style={{color:"rgba(0, 0, 0, 0.75)"}}>
+            <div style={{color:"rgba(0, 0, 0, 0.75)",marginLeft:"50px"}} >
                 <p style={{marginBottom:"20px",fontSize:"17px",fontFamily:"'Playfair Display', serif",color:"rgba(0, 0, 0, 0.75)"}}>CONTACT INFO</p>
                 <p>123 5th Avenue, New York,NY</p>
                 <p>120004, USA.</p>
@@ -41,7 +42,7 @@ export const Footer = () => {
                 <p>lovkumar120169@gmail.com</p>
             </div>
         </div>
-        <div style={{borderTop:"1px solid rgba(0, 0, 0, 0.05)",height:"80px",display:"flex",justifyContent:"space-between",alignItems:"center",fontSize:"18px",padding:"0px 120px",fontSize:"16px",color:"rgba(0, 0, 0, 0.75)"}}>
+        <div id='footer-last'>
             <div>
                 <p>Copyright © 2023 Immortal Yoga</p>
             </div>

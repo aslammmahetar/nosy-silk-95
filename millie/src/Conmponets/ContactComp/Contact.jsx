@@ -8,14 +8,14 @@ import "../../style.css"
 export const Contact = () => {
     return (
         <>
-        <div style={{ backgroundImage: "url('https://millieyoga.com/wp-content/uploads/2020/09/mandala.svg')", backgroundRepeat: "no-repeat", backgroundPosition: "center", display: "flex", gap:"40px",padding:"0px 150px",marginTop:"100px" }}>
+        <div id='contact-sec'>
             <Box width={"100%"}  >
                 <Heading fontSize={"100px"} fontWeight={400} fontFamily={"'Prata', serif"}>Contact</Heading>
                 <Text className='text-color' lineHeight={"30px"}  fontFamily={"'Montserrat', sans-serif"} fontSize={"15px"}>To book a class, call us on the number below or come into the studio and book at the <br /> desk. For all other inquiries, please fill out the message box below and we’ll get back to you ASAP.</Text>
                 <Divider borderTop={"1px solid #d9ae98"} width={"100%"} mt={10} mb={10} />
                 <Box>
                     <Box>
-                        <Flex>
+                        <Flex >
                             <Box>
                                 <div style={{ backgroundColor: "#d9ae98", marginTop: "5px", padding: "8px 12px", borderRadius: "100px" }}>
                                     <IoHome id='messege-logo' size={"20px"} style={{ marginTop: "3px" }} />
@@ -30,8 +30,8 @@ export const Contact = () => {
                 </Box>
                 <Divider borderTop={"1px solid #d9ae98"} width={"100%"} mt={10} mb={10}/>
                 <Box>
-                    <Box display={"flex"} justifyContent={"space-between"}>
-                        <Flex>
+                    <Box display={"flex"} id='email-call-contact' justifyContent={"space-between"}>
+                        <Flex >
                             <Box>
                                 <div style={{ backgroundColor: "#d9ae98", marginTop: "5px", padding: "8px 12px", borderRadius: "50px" }}>
                                     <IoCall id='messege-logo' size={"20px"} style={{ marginTop: "3px" }} />
