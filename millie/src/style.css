@@ -179,6 +179,14 @@
 #hanburgur{
     display: none;
 }
+
+/* style={{color:"",marginLeft:"50px"}} */
+
+
+#contact-last-footer{
+    color: rgba(0, 0, 0, 0.75);
+    margin-left: 50px;
+}
 @media screen and (max-width: 950px) and (min-width: 500px){
 
     #links{
@@ -251,6 +259,12 @@
     #last-sec{
         height: 45vh;
         padding-bottom: 50px;
+    }
+    #top-title{
+        color: #d9ae98;
+    }
+    .style-text{
+        text-align: center;
     }
 }
 
@@ -344,5 +358,11 @@
     #last-sec{
         height: 45vh;
         padding-bottom: 50px;
+    }
+    #top-title{
+        color: #d9ae98;
+    }
+    #contact-last-footer{
+        margin-left: 0;
     }
 }

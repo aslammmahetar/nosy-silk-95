@@ -34,7 +34,7 @@ export const Footer = () => {
                     <AiFillYoutube size={"18px"}/>
                 </div>
             </div>
-            <div style={{color:"rgba(0, 0, 0, 0.75)",marginLeft:"50px"}} >
+            <div  id='contact-last-footer' >
                 <p style={{marginBottom:"20px",fontSize:"17px",fontFamily:"'Playfair Display', serif",color:"rgba(0, 0, 0, 0.75)"}}>CONTACT INFO</p>
                 <p>123 5th Avenue, New York,NY</p>
                 <p>120004, USA.</p>
