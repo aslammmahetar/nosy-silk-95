@@ -87,7 +87,7 @@ export const Naavbar = ({ bgColor }) => {
           Contact Us
         </Link>
         <Menu>
-          <MenuButton cursor={"pointer"} backgroundColor={"none"} as={Text} >
+          <MenuButton cursor={"pointer"} backgroundColor={bgColor} as={Text} >
             Account <ChevronDownIcon />
           </MenuButton>
           <MenuList backgroundColor={"#f6f4f2"} >

@@ -9,13 +9,15 @@ import {
   Link,
   Text,
   VStack,
-  Button
+  Button,
+  Grid
 } from "@chakra-ui/react";
 import { Naavbar } from "../Conmponets/HomeComp/Navbar";
 import "../Conmponets/AboutUsComp/AboutUs.css"
 import { EmailIcon, Icon } from "@chakra-ui/icons";
 import styles from "../Conmponets/ClassesComp/Styles/classes.module.css"
 import locations from "../Assets/yogas_locations.png"
+import {useNavigate } from "react-router-dom";
 
 import {
   AiFillFacebook,
@@ -23,64 +25,82 @@ import {
   AiFillYoutube,
 } from "react-icons/ai";
 
+
 //assign to sharad
 function AboutUs() {
+
+  const navigate=useNavigate()
+
+  const handleChange=()=>{
+    return navigate("/classes")
+  }
+ 
   return (
 
-    
+
     <Box width={"100%"} bg={"#f3eeec"}>
 
-       <Naavbar bgColor={"#D9AE98"}/>
+      <Naavbar bgColor={"#D9AE98"} />
 
 
-       <Box
-      bgColor={"#D9AE98"}
-      p={"70px"}
-      backgroundImage={
-        "url('https://millieyoga.com/wp-content/uploads/2020/09/mandala.svg')"
-      }
-      backgroundRepeat={"no-repeat"}
-    >
-      <Text as={"h1"} className={styles.prata} fontSize={"120px"}>
-        About Us
-      </Text>
-    </Box>
-      
+      <Box
+        bgColor={"#D9AE98"}
+        p={"70px"}
+        backgroundImage={
+          "url('https://millieyoga.com/wp-content/uploads/2020/09/mandala.svg')"
+        }
+        backgroundRepeat={"no-repeat"}
+      >
+        <Text as={"h1"} className={styles.prata} fontSize={{ base: "45px", sm: "45px", md: "100px", lg: "120px" }}>
+          About Us
+        </Text>
+      </Box>
+
 
 
       {/* <---------------------------Yogs studios newYork session------------------------------------> */}
 
       <Box mt={"50px"} >
         <Box width={"100%"}>
-          <Flex justifyContent={"space-around"} textAlign={"justify"}>
-            <Box width={"30%"} padding={"20px"}>
-              <Heading as="h3"
-                      fontFamily={"montserrat"}
-                      textAlign={"justify"} 
-                      size={"lg"}>
+          <Flex
+            direction={{ base: "column", md: "coloum", lg: "row" }}
+            justifyContent={{ base: "space-around", md: "justify" }}
+            textAlign={{ base: "center", lg: "justify" }}
+          >
+            <Box width={{ base: "100%", md: "80%", lg: "30%" }} padding={"20px"}>
+              <Heading
+                as="h3"
+                fontFamily="montserrat"
+                textAlign={{ base: "center", md: "justify" }}
+                size="lg"
+              >
                 Yoga Studio in the City of New York
               </Heading>
-              <Link href='https://www.google.co.in/maps/search/yoga+studios+in+new+york/@40.7777175,-73.9290838,11.23z' isExternal><Img src={locations}/></Link>
-             
+              <Link
+                href="https://www.google.co.in/maps/search/yoga+studios+in+new+york/@40.7777175,-73.9290838,11.23z"
+                isExternal
+              >
+                <Img src={locations} />
+              </Link>
             </Box>
-            <Box width={"30%"} padding={"20px"}>
-              <Text >
-                We deliberately chose to put our new yoga studio in one of the
-                busiest cities on the planet because we knew it would be the
-                perfect place to help people relax and center themselves. City
-                living can be stressful and hectic, and having access to a
-                complete yoga studio can help people deal with those stresses
-                and stay fit and healthy.
+
+            <Box width={{ base: "100%", md: "80%", lg: "30%" }} padding={"20px"}>
+              <Text>
+                We deliberately chose to put our new yoga studio in one of the busiest
+                cities on the planet because we knew it would be the perfect place to
+                help people relax and center themselves. City living can be stressful and
+                hectic, and having access to a complete yoga studio can help people deal
+                with those stresses and stay fit and healthy.
               </Text>
             </Box>
-            <Box width={"30%"} padding={"20px"}>
+
+            <Box width={{ base: "100%", md: "80%", lg: "30%" }} padding={"20px"}>
               <Text>
-                Our expansive studio has nine yoga classes every day covering a
-                huge range of yoga styles, including Anusara, Ashtanga, Bikram,
-                Hatha, Hot yoga, Lyengar, Restorative yoga, and Vinyasa. We have
-                a full range of classes for every level of experience and offer
-                specific beginner classes to get you started on your yoga
-                journey.
+                Our expansive studio has nine yoga classes every day covering a huge
+                range of yoga styles, including Anusara, Ashtanga, Bikram, Hatha, Hot
+                yoga, Lyengar, Restorative yoga, and Vinyasa. We have a full range of
+                classes for every level of experience and offer specific beginner classes
+                to get you started on your yoga journey.
               </Text>
             </Box>
           </Flex>
@@ -91,8 +111,12 @@ function AboutUs() {
         {/* <--------------------------- Discover Session------------------------->*/}
 
         <Box mt={"50px"}>
-          <Flex justifyContent={"space-around"}>
-            <Box width={"40%"} pos={"relative"}>
+          <Flex
+            direction={{ base: "column", md: "coloum", lg: "row" }}
+            justifyContent={{ base: "space-around", md: "justify" }}
+            textAlign={{ base: "center", lg: "justify" }}>
+
+            <Box pos={"relative"} width={{ base: "100%", md: "80%", lg: "40%" }}>
               <Circle
                 bg={"red"}
                 size={"400px"}
@@ -114,7 +138,7 @@ function AboutUs() {
                 w={"50%"}
               />
             </Box>
-            <Box width={"40%"} mt={"50px"} textAlign={"left"}>
+            <Box width={{ base: "100%", md: "80%", lg: "40%" }} mt={"50px"} textAlign={"left"}>
               <Divider w={"100px"} color={"red"} orientation="horizontal" />
               <Heading>
                 “Yoga has been a hugely transformative and positive force in my
@@ -129,20 +153,25 @@ function AboutUs() {
           </Flex>
         </Box>
       </Box>
-      <Box mt={"50px"} pos={"relative"}>
+
+
+      <Box mt={"50px"} pos={"relative"} >
         <Img
           src="https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-discover-studio-bg.jpg"
           w={"100%"}
+
         />
         <Box
-          w={"20%"}
+
           pos={"absolute"}
+          width={{ base: "100%", sm: "80%", md: "40%", lg: "20%" }}
           bottom={"0px"}
           left={"30px"}
           bg={"orange.300"}
           padding={"30px"}
         >
-          <Heading>Discover Our Yoga Studio</Heading>
+          <Heading> <Text >Discover Our Yoga Studio</Text></Heading>
+          
           <br></br>
           <Text>
             Come down to our expansive downtown yoga studio and discover the
@@ -150,14 +179,14 @@ function AboutUs() {
           </Text>
           <br></br>
           <br></br>
-          <Text>Discover Now</Text>
+          <Link ><Text onClick={handleChange} cursor={"pointer"}> Discover Now</Text></Link>
         </Box>
       </Box>
 
 
 
-    
-        {/* <--------------------------------- Certificates Session--------------------------------> */}
+
+      {/* <--------------------------------- Certificates Session--------------------------------> */}
 
       <Box w={"100%"} p={"40px"}>
         {/* 
@@ -166,11 +195,18 @@ function AboutUs() {
                 https://millieyoga.com/wp-content/uploads/2020/09/example-logo-3.png
                 https://millieyoga.com/wp-content/uploads/2020/09/example-logo-4.png
                 */}
-        <Flex>
-          <Text color={"orange"} w={"20%"}>
+        <Flex  >
+          <Text color={"orange"} w={{ base: "80%", md: "50%", lg: "20%" }}>
             OUR CERTIFICATION
           </Text>
-          <Flex w={"80%"} justifyContent={"space-around"}>
+
+          <Grid templateColumns={{
+            base: "repeat(1, 1fr)",
+            sm: "repeat(2, 1fr)",
+            md: "repeat(3, 1fr)",
+            lg: "repeat(4, 1fr)",
+          }} columnGap={"100px"} mb={{ base: "60px", sm: "50px", md: "20px", lg: "0px" }}
+          >
             <Image
               src="https://millieyoga.com/wp-content/uploads/2020/09/example-logo-1.png"
               alt="imge1"
@@ -187,7 +223,7 @@ function AboutUs() {
               src="https://millieyoga.com/wp-content/uploads/2020/09/example-logo-4.png"
               alt="imge1"
             />
-          </Flex>
+          </Grid>
         </Flex>
       </Box>
 
@@ -198,90 +234,61 @@ function AboutUs() {
       {/* <---------------------------Yoga Instructor session----------------------> */}
 
       <Box mt={"70px"}>
-        <VStack>
-          <Heading as={"h2"} mb={"80px"}>Yoga Instructors</Heading>
-
-          <Flex mt={"40px"}>
-            <Box>
-              <Image
-                src="https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-instructor-1.jpg"
-                alt=""
-              />
-              <br></br>
-              <Text>ELLEN SHERMAN</Text>
-              <br></br>
-              <Flex justifyContent={"center"} gap={"5px"}>
-                <Link href='' isExternal><AiFillFacebook size={"18px"} /></Link>
-                <Link href='' isExternal> <AiOutlineTwitter size={"18px"} /></Link>
-                <Link href='https://www.youtube.com/watch?v=sSiA25XlG_A' isExternal> <AiFillYoutube size={"18px"} /></Link>
-              </Flex>
-            </Box>
-
-
-
-          {/* <-------------------------News Setller Session---------------------> */}
-
-            <Box>
-              <Image
-                src="https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-instructor-3.jpg"
-                alt=""
-              />
-              <br></br>
-              <Text>CHRISTINA LATHAM</Text>
-              <br></br>
-              <Flex justifyContent={"center"} gap={"5px"}>
-                <Link href='' isExternal><AiFillFacebook size={"18px"} /></Link>
-                <Link href='' isExternal> <AiOutlineTwitter size={"18px"} /></Link>
-                <Link href='https://www.youtube.com/watch?v=sSiA25XlG_A' isExternal> <AiFillYoutube size={"18px"} /></Link>
-              </Flex>
-            </Box>
-            <Box>
-              <Image
-                src=" https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-instructor-2.jpg"
-                alt=""
-              />
-              <br></br>
-              <Text>LUKE STRYKER</Text>
-              <br></br>
-              <Flex justifyContent={"center"} gap={"5px"} >
-                
-                <Link href='' isExternal><AiFillFacebook size={"18px"} /></Link>
-                <Link href='' isExternal> <AiOutlineTwitter size={"18px"} /></Link>
-                <Link href='https://www.youtube.com/watch?v=sSiA25XlG_A' isExternal> <AiFillYoutube size={"18px"} /></Link>
-              </Flex>
-            </Box>
-            <Box>
-              <Image
-                src=" https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-instructor-4.jpg"
-                alt=""
-              />
-              <br></br>
-              <Text>GLORIA BENNER</Text>
-              <br></br>
-              <Flex justifyContent={"center"} gap={"5px"}>
-                <Link href='' isExternal><AiFillFacebook size={"18px"} /></Link>
-                <Link href='' isExternal> <AiOutlineTwitter size={"18px"} /></Link>
-                <Link href='https://www.youtube.com/watch?v=sSiA25XlG_A' isExternal> <AiFillYoutube size={"18px"} /></Link>
-
-                {/* <AiFillFacebook size={"18px"} />
-            <AiOutlineTwitter size={"18px"} />
-            <AiFillInstagram size={"18px"} />
-            <AiFillYoutube size={"18px"} /> */}
-              </Flex>
-            </Box>
-          </Flex>
-        </VStack>
+        <Heading fontSize={"32px"} fontWeight={400} fontFamily={"'Prata', serif"}>Yoga Instructors</Heading>
+        <Grid id='yoga-ins' templateColumns={{
+          base: "repeat(1, 1fr)",
+          sm: "repeat(2, 1fr)",
+          md: "repeat(3, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}>
+          <Box>
+            <Image mb={5} src="https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-instructor-1.jpg" />
+            <Text mb={5} fontFamily={"'Montserrat', sans-serif"} fontSize={"14px"}>ELLEN SHERMAN</Text>
+            <Flex mb={5} alignItems={"center"} justifyContent={"center"} gap={"20px"}>
+              <Link href='' isExternal><AiFillFacebook size={"18px"} /></Link>
+              <Link href='' isExternal> <AiOutlineTwitter size={"18px"} /></Link>
+              <Link href='https://www.youtube.com/watch?v=sSiA25XlG_A' isExternal> <AiFillYoutube size={"18px"} /></Link>
+            </Flex>
+          </Box>
+          <Box>
+            <Image mb={5} src="https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-instructor-3.jpg" />
+            <Text mb={5} fontFamily={"'Montserrat', sans-serif"} fontSize={"14px"}>CHRISTINA LATHAM</Text>
+            <Flex mb={5} alignItems={"center"} justifyContent={"center"} gap={"20px"}>
+              <Link href='' isExternal><AiFillFacebook size={"18px"} /></Link>
+              <Link href='' isExternal> <AiOutlineTwitter size={"18px"} /></Link>
+              <Link href='https://www.youtube.com/watch?v=sSiA25XlG_A' isExternal> <AiFillYoutube size={"18px"} /></Link>
+            </Flex>
+          </Box>
+          <Box>
+            <Image mb={5} src="https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-instructor-2.jpg" />
+            <Text mb={5} fontFamily={"'Montserrat', sans-serif"} fontSize={"14px"}>LUKE STRYKER</Text>
+            <Flex mb={5} alignItems={"center"} justifyContent={"center"} gap={"20px"}>
+              <Link href='' isExternal><AiFillFacebook size={"18px"} /></Link>
+              <Link href='' isExternal> <AiOutlineTwitter size={"18px"} /></Link>
+              <Link href='https://www.youtube.com/watch?v=sSiA25XlG_A' isExternal> <AiFillYoutube size={"18px"} /></Link>
+            </Flex>
+          </Box>
+          <Box>
+            <Image mb={5} src="https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-instructor-4.jpg" />
+            <Text mb={5} fontFamily={"'Montserrat', sans-serif"} fontSize={"14px"}>GLORIA BENNER</Text>
+            <Flex mb={5} alignItems={"center"} justifyContent={"center"} gap={"20px"}>
+              <Link href='' isExternal><AiFillFacebook size={"18px"} /></Link>
+              <Link href='' isExternal> <AiOutlineTwitter size={"18px"} /></Link>
+              <Link href='https://www.youtube.com/watch?v=sSiA25XlG_A' isExternal> <AiFillYoutube size={"18px"} /></Link>
+            </Flex>
+          </Box>
+        </Grid>
       </Box>
 
       <Box mt={"100px"} pos={"relative"}>
         {/* 	https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-cta-section-bg.jpg */}
         <Image src="	https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-cta-section-bg.jpg" />
         <Box pos={"absolute"} top={"50%"} left={"405"} textColor={"white"}>
-        <Button borderRadius={"50%"} size={"sm"} bgColor="#D9AE98">
-          <Icon as={EmailIcon}></Icon>
-        </Button>
+          <Button borderRadius={"50%"} size={"sm"} bgColor="#D9AE98">
+            <Icon as={EmailIcon}></Icon>
+          </Button>
 
-        
+
           <Heading className={styles.prata} >Subscribe To Our Newsletter</Heading>
           <br></br>
           <Text>

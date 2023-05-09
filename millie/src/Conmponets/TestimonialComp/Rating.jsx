@@ -4,7 +4,7 @@ import React from 'react'
 import "../TestimonialComp/Rating.css";
 const Rating = () => {
   return (
-<div>  
+<div id="rate_div" >  
     <div>
       <h1 id='testimonial_div'>Testimonial</h1>
     </div>

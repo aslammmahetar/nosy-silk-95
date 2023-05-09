@@ -31,9 +31,10 @@ export  const getfeedback=()=>(dispatch)=>{
 export const addfeedback=(post)=>(dispatch)=>{
   
   
-    axios.post(`https://645623335f9a4f23613b9d01.mockapi.io/api/feed/feedbacks`,post).then((res)=>{
+   return axios.post(`https://645623335f9a4f23613b9d01.mockapi.io/api/feed/feedbacks`,post).then((res)=>{
         dispatch({type:POST_FED_DATA})
         console.log(res)
+       
     }).catch((err)=>{
      console.log(err)
     })

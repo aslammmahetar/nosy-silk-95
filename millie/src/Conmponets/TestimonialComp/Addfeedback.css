@@ -1,6 +1,6 @@
     body{
     background-color: #f8f0ec;
-    height: auto;
+
 }
 .input_class{
     width: 80%;
@@ -19,3 +19,39 @@
     width: 30%;
     
 }
+
+@media all and (min-width:100px) and (max-width:600px){
+    #addfeed_div{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);  
+     
+ 
+     
+   
+    }
+}
+
+
+
+
+
+.starr {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  } 
+
+     .star-rating-filled {
+    fill: #b37500;
+  }
+   
+  .star-rating-blank {
+    fill: #d8d8d8;
+  }
+
+  .flex-container {
+    display: flex;
+  }
+   
