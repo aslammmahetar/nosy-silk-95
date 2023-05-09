@@ -7,7 +7,7 @@ Welcome to our IMMORTAL YOGA, where you can embark on a transformative journey t
 At the heart of our site, you will find a diverse range of yoga classes catering to various skill levels, styles, and interests. From gentle Hatha yoga to invigorating Vinyasa flow, from restorative Yin yoga to empowering Power yoga, we have classes to suit every preference and need. Our experienced and certified instructors bring their expertise and passion to each session, guiding you through sequences, postures, and breathing exercises that promote strength, flexibility, balance, and mindfulness.
 
 
-To Preview My actual Site You can simply click below on the link 👇👇 🌐 
+To Preview My actual Site You can simply click below on the link 👇👇 🌐 https://gleaming-cobbler-bec2a7.netlify.app/
 
 
 And here are some Snapshots of IMMORTAL YOGA please do have a look ✅
