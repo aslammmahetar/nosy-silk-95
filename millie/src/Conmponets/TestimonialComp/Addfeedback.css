@@ -1,0 +1,57 @@
+    body{
+    background-color: #f8f0ec;
+
+}
+.input_class{
+    width: 80%;
+    margin: auto;
+   height: 30px;
+   
+
+}
+#addfeed_div{
+    margin-bottom:200px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset
+}
+
+
+#add_button{
+    width: 30%;
+    
+}
+
+@media all and (min-width:100px) and (max-width:600px){
+    #addfeed_div{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);  
+     
+ 
+     
+   
+    }
+}
+
+
+
+
+
+.starr {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  } 
+
+     .star-rating-filled {
+    fill: #b37500;
+  }
+   
+  .star-rating-blank {
+    fill: #d8d8d8;
+  }
+
+  .flex-container {
+    display: flex;
+  }
+   

@@ -1,12 +1,13 @@
-import { Box, Flex, Heading,Image,Text } from '@chakra-ui/react'
+import { Box, Flex, Grid, Heading,Image,Text } from '@chakra-ui/react'
 import React from 'react'
 import {AiFillFacebook,AiOutlineTwitter,AiFillYoutube} from "react-icons/ai"
+import "../../style.css"
 
 export const YogaIns = () => {
   return (
     <div style={{marginTop:"60px",textAlign:"center"}}>
         <Heading fontSize={"32px"} fontWeight={400} fontFamily={"'Prata', serif"}>Yoga Instructors</Heading>
-        <Flex justifyContent={"center"} mt={70} mb={70}>
+        <Grid id='yoga-ins'>
             <Box>
                 <Image mb={5} src="https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-instructor-1.jpg"/>
                 <Text  mb={5} fontFamily={"'Montserrat', sans-serif"} fontSize={"14px"}>ELLEN SHERMAN</Text>
@@ -43,7 +44,7 @@ export const YogaIns = () => {
                     <AiFillYoutube/>
                 </Flex>
             </Box>
-        </Flex>
+        </Grid>
     </div>
   )
 }

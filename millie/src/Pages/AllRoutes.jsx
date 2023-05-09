@@ -41,7 +41,7 @@ const AllRoutes = () => {
           </ChakraProvider>
         }
       ></Route>
-      <Route path="/testimonial" element={<Testimonial />}></Route>
+      <Route path="/testimonial" element={<Provider store={store}><Testimonial /></Provider>}></Route>
 
       <Route
         path="/contact-us"

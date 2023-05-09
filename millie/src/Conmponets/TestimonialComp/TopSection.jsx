@@ -1,10 +1,11 @@
 //rename this file with your component folder and start working
 import React from "react";
-import "../TestimonialComp/Testimonial.css";
+import "../TestimonialComp/TopSection.css";
 
-export const TopSection = () => {
+
+export const TopSection = ({bgColor}) => {
   return (
-    <div>
+    <div id="top_div" style={{backgroundColor:bgColor}}>
       <div className="div_1">
         <div id="first_1_a">
           <img
@@ -40,12 +41,12 @@ export const TopSection = () => {
         </div>
       </div>
 
-      <div className="div_2">
+      {/* <div className="div_2">
 
       </div>
       <div className="div_3">
        <img src="" alt="" />
-      </div>
+      </div> */}
     </div>
   );
 };

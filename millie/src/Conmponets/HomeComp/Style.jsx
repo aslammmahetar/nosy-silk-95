@@ -1,12 +1,13 @@
-import { Box, Flex, Heading, Text, Button } from '@chakra-ui/react'
+import { Box, Flex, Heading, Text, Button, Grid } from '@chakra-ui/react'
 import React from 'react'
+import "../../style.css"
 
 export const Style = () => {
     return (
-        <Flex justifyContent={"space-evenly"} p={"20px 50px"} mt={10} backgroundImage={"url('https://millieyoga.com/wp-content/uploads/2020/09/mandala.svg')"} backgroundRepeat={"no-repeat"} >
+        <Grid justifyContent={"space-evenly"}  p={"20px 100px"} mt={10} backgroundImage={"url('https://millieyoga.com/wp-content/uploads/2020/09/mandala.svg')"} backgroundRepeat={"no-repeat"} id='style-div' >
             <Box>
                 <Heading fontSize={"32px"} fontWeight={400} fontFamily={"'Prata', serif"} mb={10}>Many Styles Of Yoga <br /> To Suit Everyone</Heading>
-                <Text className='text-color' lineHeight={"30px"} display={"flex"} gap={"5px"}  mb={10}  fontSize={"16px"} alignItems={"center"}>Yoga isn’t a monolith, there’s a style of yoga to <br /> suit the needs of each individual.</Text>
+                <Text className='text-color style-text' lineHeight={"30px"}   mb={10}  fontSize={"16px"} alignItems={"center"}>Yoga isn’t a monolith, there’s a style of yoga to <br /> suit the needs of each individual.</Text>
                 <Button
                     borderRadius={"25"}
                     w={"190px"}
@@ -57,6 +58,6 @@ export const Style = () => {
                 </Box>
 
             </Box>
-        </Flex>
+        </Grid>
     )
 }

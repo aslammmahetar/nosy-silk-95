@@ -5,7 +5,7 @@ import "../../style.css"
 export const Last = () => {
   return (
     // <div style={{marginBottom:"-5px"}} >
-    <div style={{ marginBottom: "-5px", backgroundImage: "url('https://millieyoga.com/wp-content/uploads/2020/09/yoga-studio-cta-section-bg.jpg')", height: "70vh" }} >
+    <div id='last-sec' >
       {/* <img width={"100%"} style={{mixBlendMode:"multiply"}} src="" alt="" /> */}
 
       <div style={{ textAlign: "center", color: "white", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" ,backgroundColor:"rgba(0, 0, 0, 0.249)",height:"70vh"}}>

@@ -1,41 +1,30 @@
-
-import React from 'react'
-import "../../style.css"
-import logo from "../../Assets/logo.png"
-import { Link } from "react-router-dom"
-import { Menu,MenuButton,MenuList,MenuItem,Text  } from '@chakra-ui/react';
-import {ChevronDownIcon} from "@chakra-ui/icons"
-import {VscAccount} from "react-icons/vsc"
-import {CiLogin} from "react-icons/ci"
+import React, { useState } from "react";
+import "../../style.css";
+import logo from "../../Assets/logo.png";
+import { Link } from "react-router-dom";
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Text,
+  Box,
+  Button,
+} from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+import { VscAccount } from "react-icons/vsc";
+import { CiLogin } from "react-icons/ci";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import "font-awesome/css/font-awesome.min.css";
+import Hamburger from "hamburger-react";
+// import { Box } from '@chakra-ui/react';
 
+export const Naavbar = ({ bgColor }) => {
+  const [isOpenl, setOpen] = useState(false);
 
-
-
-
-export const Naavbar = ({bgColor}) => {
+  // const ham=<Hamburger toggled={isOpenl} toggle={setOpen} />;
   return (
-    <div
-    className="navbar-container"
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        padding: "0px 150px",
-        backgroundColor: bgColor,
-      }}
-    >
-      {/* <Navbar
-        collapseOnSelect
-        expand="lg"
-        bg="dark"
-        variant="dark"
-        // fixed="top"
-        id="navbar"
-        className="animate-navbar nav-theme justify-content-between"
-      
-      >
-        <Container> */}
+    <Box id="navbar-container" backgroundColor={bgColor}>
       <div>
         <img
           src={logo}
@@ -44,21 +33,46 @@ export const Naavbar = ({bgColor}) => {
           alt=""
         />
       </div>
-      {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
+      <div id="hanburgur">
+        <Menu>
+          {({ isOpen }) => (
+            <>
+              <MenuButton isActive={isOpen}>
+                <Hamburger toggled={isOpenl} toggle={setOpen} />
+              </MenuButton>
+              <MenuList>
+                <MenuItem>
+                  <Link className="nav-links" to={"/"}>
+                    Home
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link className="nav-links" to={"/about-us"}>
+                    About Us
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link className="nav-links" to={"/classes"}>
+                    Classes
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link className="nav-links" to={"/testimonial"}>
+                    Testimonial
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link className="nav-links" to={"/contact-us"}>
+                    Contact Us
+                  </Link>
+                </MenuItem>
+              </MenuList>
+            </>
+          )}
+        </Menu>
+      </div>
 
-      {/* <Navbar.Collapse id="responsive-navbar-nav"> */}
-      {/* <Nav className="me-auto"></Nav> */}
-      {/* <Nav> */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "32px",
-          fontSize: "16px",
-          textDecoration: "none",
-          marginLeft: "400px",
-        }}
-      >
+      <div id="links">
         <Link className="nav-links" to={"/"}>
           Home
         </Link>
@@ -75,21 +89,27 @@ export const Naavbar = ({bgColor}) => {
           Contact Us
         </Link>
         <Menu>
-          <MenuButton cursor={"pointer"} backgroundColor={"#f6f4f2"} as={Text} >
+          <MenuButton cursor={"pointer"} backgroundColor={bgColor} as={Text}>
             Account <ChevronDownIcon />
           </MenuButton>
-          <MenuList backgroundColor={"#f6f4f2"} >
-            <MenuItem justifyContent={"space-between"} backgroundColor={"#f6f4f2"} _hover={{backgroundColor:"#d9ae98",color:"white"}}>Sign In <CiLogin/></MenuItem>
-            <MenuItem justifyContent={"space-between"} backgroundColor={"#f6f4f2"} _hover={{backgroundColor:"#d9ae98",color:"white"}}>Join Us <VscAccount/></MenuItem>
+          <MenuList backgroundColor={"#f6f4f2"}>
+            <MenuItem
+              justifyContent={"space-between"}
+              backgroundColor={"#f6f4f2"}
+              _hover={{ backgroundColor: "#d9ae98", color: "white" }}
+            >
+              Sign In <CiLogin />
+            </MenuItem>
+            <MenuItem
+              justifyContent={"space-between"}
+              backgroundColor={"#f6f4f2"}
+              _hover={{ backgroundColor: "#d9ae98", color: "white" }}
+            >
+              Join Us <VscAccount />
+            </MenuItem>
           </MenuList>
         </Menu>
-        
       </div>
-      {/* </Nav> */}
-      {/* </Navbar.Collapse>
-      </Container>
-      </Navbar> */}
-     </div>
-  );
+    </Box>
+  );
 };
- 

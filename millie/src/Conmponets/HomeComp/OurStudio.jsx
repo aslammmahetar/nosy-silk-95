@@ -5,9 +5,9 @@ import { MdLocationOn } from "react-icons/md"
 
 export const OurStudio = () => {
     return (
-        <>
+        <div id="our-studio-main">
         <Text color={"#d9ae98"} fontSize={"15px"} fontFamily={"'Montserrat', sans-serif"} pt={"140px"} mb={5} ml={"175px"}>OUR STUDIO</Text>
-            <Flex justifyContent={"space-around"} padding={"0px 40px"} >
+            <Flex id='our-studio' justifyContent={"space-around"} padding={"0px 40px"} >
                 
                 <Box>
 
@@ -32,6 +32,6 @@ export const OurStudio = () => {
                 </Box>
 
             </Flex>
-            </>
+            </div >
     )
 }
