@@ -46,7 +46,7 @@ font-family:fangsong;
     .rating {
     display: flex;
     font-size: 25px;
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
     justify-content: flex-start;
 
     }
@@ -76,3 +76,11 @@ font-family:fangsong;
     opacity: 0.4;
      }
      
+
+     @media all and (min-width:100px) and (max-width:600px){
+        .div_1{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            
+        }
+     }

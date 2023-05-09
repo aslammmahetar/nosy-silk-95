@@ -1,0 +1,21 @@
+
+    @media all and (min-width:100px) and (max-width:600px){
+        #qqq{  
+             display:grid;
+        grid-template-columns:repeat(1,1fr);
+        border: 2px solid yellow;
+    }
+}
+
+.f_div_1{
+    display:grid;
+   grid-template-columns:repeat(2,1fr);
+     margin:auto;
+     padding:30px;
+     width:90%;
+    gap:70px 50px
+}
+#flex_cont{
+   margin-top: 30px;
+   
+}
